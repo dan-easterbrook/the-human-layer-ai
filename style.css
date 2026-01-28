@@ -174,5 +174,8 @@ body{
 .social-links img {
   width: 22px;
   height: 22px;
-  opacity: 0.9;
+  opacity: 0.95;
+  display: block;
+  filter: invert(1);
 }
+
