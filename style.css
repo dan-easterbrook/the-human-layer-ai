@@ -150,3 +150,29 @@ body{
   font-size: 13px;
 }
 .footer a{ color: var(--link); }
+.social-links {
+  display: flex;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+}
+
+.social-links a:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.social-links img {
+  width: 22px;
+  height: 22px;
+  opacity: 0.9;
+}
