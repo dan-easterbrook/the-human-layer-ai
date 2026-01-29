@@ -200,3 +200,33 @@ body{
 .navbtns a:hover {
   background: rgba(255,255,255,0.08);
 }
+/* Header layout */
+.site-header .header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;              /* the key fix */
+}
+
+/* Nav buttons */
+.site-header nav{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;              /* also key */
+}
+
+.site-header nav a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  white-space:nowrap;
+}
+
+/* Mobile: give nav its own row */
+@media (max-width: 640px){
+  .site-header nav{
+    width:100%;
+  }
+}
