@@ -230,3 +230,18 @@ body{
     width:100%;
   }
 }
+.article-nav a{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  white-space:nowrap;
+  line-height:1;
+}
+
+.article-nav a .icon,
+.article-nav a svg{
+  display:inline-block;
+  width:1em;
+  height:1em;
+  flex:0 0 auto;
+}
