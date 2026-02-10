@@ -476,3 +476,220 @@ article a:hover{
     font-size: 26px;
   }
 }
+/* ---------- Human Layer AI theme: warm paper + ink ---------- */
+
+:root{
+  --bg: #f4f1ea;          /* warm paper */
+  --surface: #ffffff;     /* card surface */
+  --surface-2: #fbf8f2;   /* section surface */
+  --border: #e6dfd3;      /* soft paper edge */
+  --text: #141414;        /* ink */
+  --muted: #4b4b4b;       /* secondary ink */
+  --muted-2: #6a6a6a;     /* lighter */
+  --link: #141414;        /* keep links ink, not blue */
+  --shadow: 0 10px 28px rgba(20,20,20,0.10);
+  --shadow-2: 0 1px 0 rgba(20,20,20,0.06);
+  --radius: 18px;
+}
+
+html, body{
+  background: var(--bg);
+  color: var(--text);
+}
+
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  line-height: 1.7;
+  letter-spacing: 0.1px;
+}
+
+/* Container */
+.container{
+  max-width: 980px;
+  margin: 26px auto;
+  padding: 0 18px 26px;
+}
+
+/* Header */
+.topbar{
+  background: rgba(255,255,255,0.72);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2);
+  backdrop-filter: blur(8px);
+}
+
+/* Brand */
+.brand img{
+  border-radius: 10px;
+}
+
+.name{
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.tag{
+  color: var(--muted-2);
+}
+
+/* Nav */
+.nav a{
+  color: var(--muted);
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+.nav a:hover{
+  color: var(--text);
+  border-color: var(--border);
+  background: var(--surface-2);
+}
+
+/* Hero */
+.hero{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.hero h1{
+  color: var(--text);
+  letter-spacing: -0.4px;
+}
+.hero p{
+  color: var(--muted);
+}
+
+/* Sections */
+.section{
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2);
+}
+
+/* Cards: make them clearly distinct from sections */
+.cards{
+  gap: 14px;
+}
+
+.card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  transform: none;
+}
+.card:hover{
+  background: #ffffff;
+  border-color: #d8cfbf;
+  box-shadow: 0 14px 36px rgba(20,20,20,0.14);
+  transform: translateY(-2px);
+}
+
+.card a{
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+}
+.card a:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.meta{
+  color: var(--muted-2);
+  font-size: 13px;
+}
+
+/* Make descriptions consistently styled */
+.desc, .card p{
+  color: var(--muted);
+  font-size: 14.5px;
+}
+
+/* Article surface */
+article{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+article h1{
+  font-size: 32px;
+  letter-spacing: -0.35px;
+  margin-bottom: 10px;
+}
+
+/* THIS is what will make articles feel "broken up" again */
+article h2{
+  margin-top: 26px;
+  margin-bottom: 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+article h3{
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* Paragraph rhythm */
+article p{
+  color: var(--text);
+  max-width: 72ch;
+  margin: 0 0 16px;
+}
+
+/* Make bold text read like a deliberate “subheading cue” */
+article strong{
+  font-weight: 800;
+  background: #f6f0e6;
+  padding: 0 4px;
+  border-radius: 6px;
+}
+
+/* Links feel editorial, not web-default */
+a{
+  color: var(--link);
+}
+article a{
+  text-decoration: underline;
+  text-decoration-color: rgba(20,20,20,0.35);
+  text-underline-offset: 3px;
+}
+article a:hover{
+  text-decoration-color: rgba(20,20,20,0.75);
+}
+
+/* Buttons */
+.navbtns a{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+}
+.navbtns a:hover{
+  background: #fff;
+  border-color: #d8cfbf;
+}
+
+/* Footer */
+.footer{
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: var(--muted-2);
+}
+
+/* Mobile */
+@media (max-width: 720px){
+  .hero h1{ font-size: 28px; }
+  article h1{ font-size: 26px; }
+  .cards{ grid-template-columns: 1fr; }
+}
