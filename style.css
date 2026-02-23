@@ -241,32 +241,12 @@ article strong{
 }
 
 /* Article prev/next buttons */
-.navbtns{
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 28px 0 10px;
+.article .navbtns { display:flex; gap:12px; justify-content:center; margin: 14px 0 0; }
+.article .navbtns a {
+  background:#ffffff; color:#1b263b; text-decoration:none; font-weight:700;
+  padding:8px 14px; border-radius:10px; border:1px solid var(--border); display:inline-block;
 }
-.navbtns a{
-  background: var(--surface);
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 800;
-  padding: 10px 14px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-2);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  white-space: nowrap;
-  line-height: 1;
-}
-.navbtns a:hover{
-  background: #ffffff;
-  border-color: #d8cfbf;
-}
+.article .navbtns a:hover { background: rgba(255,255,255,0.85); }
 
 /* Footer */
 .footer{
