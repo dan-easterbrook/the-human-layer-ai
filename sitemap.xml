@@ -7,11 +7,49 @@
   </url>
 
   <url>
+    <loc>https://www.humanlayerai.co.uk/articles/</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Pillar Page -->
+  <url>
+    <loc>https://www.humanlayerai.co.uk/articles/how-to-start-using-ai-in-your-business.html</loc>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Articles -->
+  <url>
     <loc>https://www.humanlayerai.co.uk/articles/what-ai-adoption-really-means.html</loc>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://www.humanlayerai.co.uk/articles/guardrails-before-fireworks.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.humanlayerai.co.uk/articles/bookend-skills.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.humanlayerai.co.uk/articles/ai-transformation-vs-usage.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.humanlayerai.co.uk/articles/vendor-reality-checks.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.humanlayerai.co.uk/articles/production-vs-proof-of-concept.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.humanlayerai.co.uk/articles/from-usage-to-adoption.html</loc>
     <priority>0.8</priority>
   </url>
 
