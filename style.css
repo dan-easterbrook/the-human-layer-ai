@@ -323,3 +323,23 @@ article strong{
     font-size: 26px;
   }
 }
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+
+.card{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+.card a{
+  display:block;
+}
+
+.card .desc{
+  margin-top:auto;
+}
