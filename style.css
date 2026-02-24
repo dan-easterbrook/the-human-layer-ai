@@ -323,3 +323,32 @@ article strong{
 .card .desc{
   margin-top:auto;
 }
+/* Links */
+a{
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+a:hover{
+  text-decoration-thickness: 3px;
+  opacity: 0.92;
+}
+
+/* Make inline links feel intentional inside articles */
+.article a{
+  font-weight: 700;
+}
+.callout{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin: 16px 0;
+}
+
+.callout strong{
+  display:block;
+  margin-bottom: 6px;
+}
