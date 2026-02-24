@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>AI Governance for Business: Guardrails Before Fireworks | The Human Layer AI</title>
   <meta name="description" content="AI governance that enables speed. How to set guardrails in plain English, define ownership, log decisions, and reduce risk without slowing delivery." />
-  <link rel="stylesheet" href="../style.css" />
 
-  <!-- Canonical + social -->
-  <link rel="canonical" href="https://www.humanlayerai.co.uk/articles/guardrails-before-fireworks.html">
-  <meta property="og:title" content="Guardrails before fireworks">
-  <meta property="og:description" content="Why AI guardrails speed teams up, how to design them in plain English, and what good governance looks like in practice.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://www.humanlayerai.co.uk/articles/guardrails-before-fireworks.html">
+  <link rel="canonical" href="https://www.humanlayerai.co.uk/articles/guardrails-before-fireworks.html" />
+
+  <meta property="og:title" content="Guardrails Before Fireworks" />
+  <meta property="og:description" content="Why AI guardrails speed teams up, how to design them in plain English, and what good governance looks like in practice." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.humanlayerai.co.uk/articles/guardrails-before-fireworks.html" />
+
+  <link rel="stylesheet" href="/style.css" />
 
   <style>
     .article { max-width: 780px; margin: 0 auto; padding: 22px 18px; }
@@ -20,111 +22,391 @@
     .article .meta { color: var(--muted); font-size: 13px; margin-bottom: 18px; }
     .article p { color: var(--text); }
     .article h2 { margin-top: 22px; }
-    .navbtns { display:flex; gap:12px; justify-content:center; margin: 22px 0 0; }
+    .article h3 { margin-top: 18px; }
+    .navbtns { display:flex; gap:12px; justify-content:center; margin: 22px 0 0; flex-wrap: wrap; }
     .navbtns a {
       background:#ffffff; color:#1b263b; text-decoration:none; font-weight:700;
       padding:8px 14px; border-radius:10px; border:1px solid var(--border); display:inline-block;
     }
     .navbtns a:hover { background: rgba(255,255,255,0.9); }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are AI guardrails in a business context?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI guardrails are the practical boundaries that make AI use safe and repeatable. They include ownership, logging, review steps, and clear rules for where AI can and cannot be used."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does AI governance slow teams down?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Good governance usually speeds teams up. It reduces ambiguity, shortens approval cycles, and makes it clear what is allowed, what needs review, and who can decide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the simplest governance starting point?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with a one-page policy, named owners, and an audit trail for prompts, context, outputs, and human sign-off for one real workflow. Make it visible and easy to follow."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should be logged when using generative AI at work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Log the prompt, relevant context, the output, the human decision, and a timestamp. The goal is traceability so risks can be managed and learning can compound."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <div class="container" id=top>
+  <div class="container" id="top">
     <div class="topbar">
       <div class="brand">
-        <img src="../logo.png" alt="The Human Layer AI logo" />
+        <img src="/logo.png" alt="The Human Layer AI logo" />
         <div>
           <div class="name">The Human Layer AI</div>
           <div class="tag">Practical guidance on AI adoption for business leaders</div>
         </div>
       </div>
-<div class="nav">
-  <a href="/">Home</a>
-  <a href="/articles/">Articles</a>
-</div>
 
+      <div class="nav">
+        <a href="/">Home</a>
+        <a href="/articles/">Articles</a>
+        <a href="/ai-adoption-faq.html">FAQ</a>
+      </div>
     </div>
 
     <article class="article">
-      <h1>Governance that speeds teams up</h1>
-<div class="meta">6–7 min read • Governance</div>
+      <h1>Guardrails Before Fireworks</h1>
+      <div class="meta">6–7 min read • Governance</div>
 
-<p>Governance is often treated as something that slows delivery. A necessary constraint. A box to tick before work can begin.</p>
+      <p>
+        Governance is often treated as something that slows delivery.
+      </p>
 
-<p>In practice, the opposite is often true.</p>
+      <p>
+        In practice, the opposite is usually true.
+      </p>
 
-<p>When governance gives teams a clear route forward, it becomes an accelerator. When expectations are explicit and ownership is clear, work moves with less hesitation and fewer interruptions. The friction comes not from rules, but from ambiguity.</p>
+      <p>
+        Good AI guardrails reduce ambiguity. They clarify what is allowed, what needs review, and who can decide.
+      </p>
 
-<p>The pressure on this is increasing. AI adoption is spreading across sectors at the same time as regulatory attention tightens and budgets come under strain. Organisations want progress they can trust, and they want it without delay. The teams that move first tend to set the pattern for everyone else.</p>
+      <p>
+        That turns governance into an accelerator.
+      </p>
 
-<p>What separates them is rarely a heavyweight framework. It is a small set of non negotiables, written down, owned by named people, and allowed to travel with delivery.</p>
+      <p>
+        If you want the broader operating model view, see
+        <a href="/articles/ai-governance-in-business.html">AI Governance in Business</a>.
+      </p>
 
-<h2>What lightweight governance actually is</h2>
+      <h2>Why the Pressure Is Increasing</h2>
 
-<p>Lightweight does not mean loose.</p>
+      <p>
+        AI adoption is spreading across sectors at the same time as regulatory attention tightens and budgets come under strain.
+      </p>
 
-<p>It means intentional, visible, and easy to work with. It replaces long documents with clarity. It reduces debate rather than extending it. When governance is too heavy, decisions stall and opportunities slip away. When it is too light, surprises emerge and confidence erodes.</p>
+      <p>
+        Organisations want progress they can trust, and they want it without delay.
+      </p>
 
-<p>The productive middle is governance that makes expectations obvious so teams can move without constant checkpoints.</p>
+      <p>
+        The teams that move first tend to set the pattern for everyone else.
+      </p>
 
-<h2>Ownership and auditability</h2>
+      <p>
+        What separates them is rarely a heavyweight framework.
+      </p>
 
-<p>These two sit together.</p>
+      <p>
+        It is a small set of non negotiables, written down, owned by named people, and allowed to travel with delivery.
+      </p>
 
-<p>Governance fails when it belongs to everyone, which usually means it belongs to no one. Teams that deliver consistently attach names to responsibilities. One person owns model and vendor policy. One owns data access and logging. One owns review and sign off.</p>
+      <h2>What Lightweight Governance Actually Is</h2>
 
-<p>This is not about control. It is about making decisions easy to locate.</p>
+      <p>
+        Lightweight does not mean loose.
+      </p>
 
-<p>Those decisions also need to be visible. A simple audit trail from the start changes the tone of delivery. Capture the prompt, the context, the output, and the human decision, with a timestamp. Store it somewhere that risk and compliance partners can actually access.</p>
+      <p>
+        It means intentional, visible, and easy to work with.
+      </p>
 
-<p>This single practice replaces reassurance with evidence. It shortens approvals and turns “we think this works” into “we can show it works”.</p>
+      <p>
+        It replaces long documents with clarity.
+      </p>
 
-<h2>Guardrails that move with the work</h2>
+      <p>
+        It reduces debate rather than extending it.
+      </p>
 
-<p>High performing teams do not try to predict every risk upfront through central committees. They embed a small number of guardrails into each project.</p>
+      <p>
+        When governance is too heavy, decisions stall and opportunities slip away.
+      </p>
 
-<p>A human in the loop for decisions with customer, financial, or regulatory impact. A short review of likely failure modes before go live. A clear definition of what happens if the system needs to be paused. A named owner with authority to act if signals move out of bounds.</p>
+      <p>
+        When it is too light, surprises emerge and confidence erodes.
+      </p>
 
-<p>These guardrails do not slow delivery. They give teams confidence to move faster because the edges are covered.</p>
+      <p>
+        The productive middle is governance that makes expectations obvious so teams can move without constant checkpoints.
+      </p>
 
-<h2>Governance in how you buy, not just how you build</h2>
+      <h2>Ownership and Auditability</h2>
 
-<p>Governance also shows up in procurement.</p>
+      <p>
+        These two sit together.
+      </p>
 
-<p>When evaluating vendors, teams that move well shift the conversation away from generic capability claims. They ask to see the before and after workflow. They ask what logs are available and how long they are retained. They ask how prompts and data are separated across tenants. They ask what breaks internally if the system is paused.</p>
+      <p>
+        Governance fails when it belongs to everyone, which usually means it belongs to no one.
+      </p>
 
-<p>These questions are not traps. They are checks for alignment. Vendors who are ready for production welcome them. Others reveal limits quickly.</p>
+      <p>
+        Teams that deliver consistently attach names to responsibilities.
+      </p>
 
-<h2>Making governance legible</h2>
+      <p>
+        One person owns model and vendor policy.
+      </p>
 
-<p>Good governance only works if people can understand it.</p>
+      <p>
+        One owns data access and logging.
+      </p>
 
-<p>Policies that require interpretation are rarely followed. Teams that make progress translate rules into simple visuals, one page summaries, and short update notes. Each iteration is accompanied by a brief explanation of what changed and why.</p>
+      <p>
+        One owns review and sign off.
+      </p>
 
-<p>This keeps the wider organisation informed and builds trust without fanfare.</p>
+      <p>
+        This is not about control. It is about making decisions easy to locate.
+      </p>
 
-<h2>A practical starting point</h2>
+      <p>
+        Those decisions also need to be visible.
+      </p>
 
-<p>Progress here does not require a long programme.</p>
+      <p>
+        A simple audit trail changes the tone of delivery.
+      </p>
 
-<p>Start with a one page policy and name the owners. Add prompt logging and human sign off to a single workflow. Run a short failure mode review and define the point at which the system would be paused. Publish a simple before and after summary of what changed and what was learned.</p>
+      <p>
+        Capture the prompt, the context, the output, and the human decision, with a timestamp.
+      </p>
 
-<p>Within a month, governance becomes visible, testable, and supportive of delivery. The aim is not completeness. It is progress that can be demonstrated.</p>
+      <p>
+        Store it somewhere risk and compliance partners can actually access.
+      </p>
 
-<h2>When teams get this right</h2>
+      <p>
+        This single practice replaces reassurance with evidence.
+      </p>
 
-<p>Teams in this position stop waiting for permission. Permission is already built into how they work.</p>
+      <p>
+        It shortens approvals and turns “we think this works” into “we can show it works”.
+      </p>
 
-<p>New use cases move in weeks rather than quarters. Trust increases. Friction drops. Conversations shift from whether something can proceed to how it should proceed safely and quickly.</p>
+      <h2>Guardrails That Move With the Work</h2>
 
-<p>Momentum stops being exceptional. It becomes normal.</p>
+      <p>
+        High performing teams do not try to predict every risk upfront through central committees.
+      </p>
 
-<div class="navbtns">
-  <a href="/articles/what-ai-adoption-really-means.html">← Previous</a>
-  <a href="/articles/">All articles</a>
-  <a href="/articles/bookend-skills.html">Next →</a>
-</div>
+      <p>
+        They embed a small number of guardrails into each workflow.
+      </p>
+
+      <p>
+        A human review step for decisions with customer, financial, or regulatory impact.
+      </p>
+
+      <p>
+        A short review of likely failure modes before go live.
+      </p>
+
+      <p>
+        A clear definition of what happens if the system needs to be paused.
+      </p>
+
+      <p>
+        A named owner with authority to act if signals move out of bounds.
+      </p>
+
+      <p>
+        These guardrails do not slow delivery.
+      </p>
+
+      <p>
+        They give teams confidence to move faster because the edges are covered.
+      </p>
+
+      <h2>Governance in How You Buy, Not Just How You Build</h2>
+
+      <p>
+        Governance also shows up in procurement.
+      </p>
+
+      <p>
+        When evaluating vendors, teams that move well shift the conversation away from generic capability claims.
+      </p>
+
+      <p>
+        They ask to see the before and after workflow.
+      </p>
+
+      <p>
+        They ask what logs are available and how long they are retained.
+      </p>
+
+      <p>
+        They ask how prompts and data are separated across tenants.
+      </p>
+
+      <p>
+        They ask what breaks internally if the system is paused.
+      </p>
+
+      <p>
+        These questions are not traps. They are checks for alignment.
+      </p>
+
+      <p>
+        Vendors who are ready for production welcome them. Others reveal limits quickly.
+      </p>
+
+      <p>
+        If you want a longer view on vendor evaluation, see
+        <a href="/articles/vendor-reality-checks.html">Vendor Reality Checks</a>.
+      </p>
+
+      <h2>Making Governance Legible</h2>
+
+      <p>
+        Good governance only works if people can understand it.
+      </p>
+
+      <p>
+        Policies that require interpretation are rarely followed.
+      </p>
+
+      <p>
+        Teams that make progress translate rules into simple visuals, one page summaries, and short update notes.
+      </p>
+
+      <p>
+        Each iteration is accompanied by a brief explanation of what changed and why.
+      </p>
+
+      <p>
+        This keeps the wider organisation informed and builds trust without fanfare.
+      </p>
+
+      <h2>A Practical Starting Point</h2>
+
+      <p>
+        Progress here does not require a long programme.
+      </p>
+
+      <p>
+        Start with a one page policy and name the owners.
+      </p>
+
+      <p>
+        Add prompt logging and human sign off to a single workflow.
+      </p>
+
+      <p>
+        Run a short failure mode review and define the point at which the system would be paused.
+      </p>
+
+      <p>
+        Publish a simple before and after summary of what changed and what was learned.
+      </p>
+
+      <p>
+        If you want a structured starting sequence, see
+        <a href="/articles/how-to-start-using-ai-in-your-business.html">How to Start Using AI in Your Business</a>.
+      </p>
+
+      <p>
+        If you want the wider sequencing view, see
+        <a href="/articles/ai-adoption-strategy-for-business.html">AI Adoption Strategy for Business</a>.
+      </p>
+
+      <p>
+        If you want a quick router to related questions, use the
+        <a href="/ai-adoption-faq.html">AI Adoption FAQ</a>.
+      </p>
+
+      <h2>When Teams Get This Right</h2>
+
+      <p>
+        Teams in this position stop waiting for permission.
+      </p>
+
+      <p>
+        Permission is already built into how they work.
+      </p>
+
+      <p>
+        New use cases move in weeks rather than quarters.
+      </p>
+
+      <p>
+        Trust increases. Friction drops.
+      </p>
+
+      <p>
+        Conversations shift from whether something can proceed to how it should proceed safely and quickly.
+      </p>
+
+      <p>
+        Momentum stops being exceptional. It becomes normal.
+      </p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>What are AI guardrails in a business context?</h3>
+      <p>
+        AI guardrails are the practical boundaries that make AI use safe and repeatable. They include ownership, logging, review steps, and clear rules for where AI can and cannot be used.
+      </p>
+
+      <h3>Does AI governance slow teams down?</h3>
+      <p>
+        Good governance usually speeds teams up. It reduces ambiguity, shortens approval cycles, and makes it clear what is allowed, what needs review, and who can decide.
+      </p>
+
+      <h3>What is the simplest governance starting point?</h3>
+      <p>
+        Start with a one-page policy, named owners, and an audit trail for prompts, context, outputs, and human sign-off for one real workflow. Make it visible and easy to follow.
+      </p>
+
+      <h3>What should be logged when using generative AI at work?</h3>
+      <p>
+        Log the prompt, relevant context, the output, the human decision, and a timestamp. The goal is traceability so risks can be managed and learning can compound.
+      </p>
+
+      <div class="navbtns">
+        <a href="/articles/what-ai-adoption-really-means.html">← Previous</a>
+        <a href="/articles/">All articles</a>
+        <a href="/articles/bookend-skills.html">Next →</a>
+      </div>
 
     </article>
 
