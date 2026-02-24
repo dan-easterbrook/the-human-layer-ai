@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>How to Evaluate AI Vendors for Your Business | The Human Layer AI</title>
-<meta name="description" content="How to evaluate AI vendors for your business. Practical questions on governance, logging, workflow impact and production readiness before signing contracts." />
+  <meta name="description" content="How to evaluate AI vendors for your business. Practical questions on governance, logging, workflow impact and production readiness before signing contracts." />
 
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="canonical" href="https://www.humanlayerai.co.uk/articles/vendor-reality-checks.html" />
 
-<link rel="canonical" href="https://www.humanlayerai.co.uk/articles/vendor-reality-checks.html">
-<meta property="og:title" content="How to Evaluate AI Vendors for Your Business">
-<meta property="og:description" content="Practical checks to judge AI tools clearly, avoid AI theatre, and assess production readiness before buying.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://www.humanlayerai.co.uk/articles/vendor-reality-checks.html">
+  <meta property="og:title" content="How to Evaluate AI Vendors for Your Business" />
+  <meta property="og:description" content="Practical checks to judge AI tools clearly, avoid AI theatre, and assess production readiness before buying." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.humanlayerai.co.uk/articles/vendor-reality-checks.html" />
+
+  <link rel="stylesheet" href="/style.css" />
 
   <style>
     .article { max-width: 780px; margin: 0 auto; padding: 22px 18px; }
@@ -20,135 +22,357 @@
     .article .meta { color: var(--muted); font-size: 13px; margin-bottom: 18px; }
     .article p { color: var(--text); }
     .article h2 { margin-top: 22px; }
-    .article .navbtns { display:flex; gap:12px; justify-content:center; margin: 14px 0 0; }
-.article .navbtns a {
-  background:#ffffff; color:#1b263b; text-decoration:none; font-weight:700;
-  padding:8px 14px; border-radius:10px; border:1px solid var(--border); display:inline-block;
-}
-.article .navbtns a:hover { background: rgba(255,255,255,0.85); }
+    .article h3 { margin-top: 18px; }
+    .article .navbtns { display:flex; gap:12px; justify-content:center; margin: 14px 0 0; flex-wrap: wrap; }
+    .article .navbtns a {
+      background:#ffffff; color:#1b263b; text-decoration:none; font-weight:700;
+      padding:8px 14px; border-radius:10px; border:1px solid var(--border); display:inline-block;
+    }
+    .article .navbtns a:hover { background: rgba(255,255,255,0.85); }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How should a business evaluate an AI vendor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with the workflow, not the features. Ask what the system replaces, who owns the outputs, how errors are handled, and what changes in decision-making. Then test whether governance, logging, and support are production ready."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What questions reveal whether an AI tool is production ready?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ask what is logged, how long logs are retained, how prompts and data are isolated across tenants, what monitoring exists, and what happens if the system must be paused. Production readiness is mostly operational, not promotional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is AI theatre in vendor conversations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI theatre is when narrative outpaces operational reality. It often shows up as impressive demos without clear ownership, integration, auditability, or a plan for failure modes and human sign-off."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should leaders measure after buying an AI tool?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Measure workflow outcomes such as cycle time, quality, error rates, decision confidence, and operational load. Usage dashboards can be useful, but they rarely reflect business impact on their own."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <div class="container" id=top>
+  <div class="container" id="top">
     <div class="topbar">
       <div class="brand">
-        <img src="../logo.png" alt="The Human Layer AI logo" />
+        <img src="/logo.png" alt="The Human Layer AI logo" />
         <div>
           <div class="name">The Human Layer AI</div>
           <div class="tag">Practical guidance on AI adoption for business leaders</div>
         </div>
       </div>
-<div class="nav">
-  <a href="/">Home</a>
-  <a href="/articles/">Articles</a>
-</div>
 
+      <div class="nav">
+        <a href="/">Home</a>
+        <a href="/articles/">Articles</a>
+        <a href="/ai-adoption-faq.html">FAQ</a>
+      </div>
     </div>
 
     <article class="article">
-      <h1>Vendor reality checks</h1>
+      <h1>Vendor Reality Checks</h1>
       <div class="meta">6–7 min read • AI Adoption</div>
 
-      <p>Most organisations do not fail at AI because the technology is weak.</p>
+      <p>
+        Most organisations do not fail at AI because the technology is weak.
+      </p>
 
-<p>They fail because they mistake motion for progress.</p>
+      <p>
+        They fail because they mistake motion for progress.
+      </p>
 
-<p>A polished demo, a confident vendor, a roadmap full of promise. It all looks like momentum. But very little of it survives first contact with real work.</p>
+      <p>
+        A polished demo, a confident vendor, a roadmap full of promise. It all looks like momentum.
+      </p>
 
-<h2>Where AI theatre actually starts</h2>
+      <p>
+        But very little of it survives first contact with real work.
+      </p>
 
-<p>This is where AI theatre thrives.</p>
+      <p>
+        The practical question is not whether the tool is impressive.
+      </p>
 
-<p>Not because people are naive, but because it is genuinely hard to tell the difference between capability and presentation when the space is moving this fast.</p>
+      <p>
+        It is whether it changes a workflow safely, with clear ownership and repeatable outcomes.
+      </p>
 
-<p>Over time, a pattern emerges.</p>
+      <p>
+        If you are building the foundations first, start with
+        <a href="/articles/how-to-start-using-ai-in-your-business.html">How to Start Using AI in Your Business</a>.
+      </p>
 
-<p>The same questions come up after pilots stall, usage drops, or teams quietly revert to old ways of working.</p>
+      <h2>Where AI Theatre Actually Starts</h2>
 
-<p>What exactly is this system replacing?<br>
-Who owns the outputs?<br>
-What happens when it is wrong?<br>
-Where does human judgement sit now?</p>
+      <p>
+        AI theatre thrives where the difference between capability and presentation is hard to see.
+      </p>
 
-<p>These are not technical questions. They are operational ones.</p>
+      <p>
+        Not because people are naive, but because the space is moving quickly and vendors are incentivised to stay high level.
+      </p>
 
-<h2>The vendor conversation is usually backwards</h2>
+      <p>
+        Over time, a pattern emerges.
+      </p>
 
-<p>Most vendor conversations do not start there.</p>
+      <p>
+        The same questions come up after pilots stall, usage drops, or teams quietly revert to old ways of working.
+      </p>
 
-<p>They start with features, scale, model size, benchmarks. All impressive, all largely abstract. The assumption is that adoption will follow once the tool exists.</p>
+      <p>
+        What exactly is this system replacing.
+        Who owns the outputs.
+        What happens when it is wrong.
+        Where does human judgement sit now.
+      </p>
 
-<p>In practice, it rarely does.</p>
+      <p>
+        These are not technical questions. They are operational ones.
+      </p>
 
-<p>Real adoption starts much earlier, with constraint rather than possibility.</p>
+      <h2>The Vendor Conversation Is Usually Backwards</h2>
 
-<p>What decisions does this system meaningfully change?<br>
-Which parts of the workflow does it touch, and which does it deliberately leave alone?<br>
-What does good usage look like on a bad day, not a perfect one?</p>
+      <p>
+        Most vendor conversations do not start with operations.
+      </p>
 
-<h2>What strong vendors can do that weak ones cannot</h2>
+      <p>
+        They start with features, scale, model size, and benchmarks.
+      </p>
 
-<p>Strong vendors can answer these questions clearly, without deflection.</p>
+      <p>
+        The assumption is that adoption will follow once the tool exists.
+      </p>
 
-<p>They are specific about limits. They talk openly about where the system struggles. They understand the difference between automation and delegation.</p>
+      <p>
+        In practice, it rarely does.
+      </p>
 
-<p>Weaker ones stay high level.</p>
+      <p>
+        Real adoption starts earlier, with constraint rather than possibility.
+      </p>
 
-<p>They rely on generalities like empowerment or transformation and push responsibility for outcomes downstream to the customer. If it fails, the implication is that adoption was mishandled.</p>
+      <p>
+        What decisions does this system meaningfully change.
+        Which parts of the workflow does it touch, and which does it deliberately leave alone.
+        What does good usage look like on a bad day, not a perfect one.
+      </p>
 
-<h2>Reality checks that protect your teams</h2>
+      <h2>What Strong Vendors Can Do That Weak Ones Cannot</h2>
 
-<p>This is why reality checks matter.</p>
+      <p>
+        Strong vendors can answer operational questions clearly, without deflection.
+      </p>
 
-<p>Not as a procurement exercise, but as a way of protecting teams from confusion later on.</p>
+      <p>
+        They are specific about limits.
+      </p>
 
-<p>A useful check is to remove the AI language entirely.</p>
+      <p>
+        They talk openly about where the system struggles.
+      </p>
 
-<p>If you describe the system without using words like intelligent, autonomous, or agentic, does the value still hold?</p>
+      <p>
+        They understand the difference between automation and delegation.
+      </p>
 
-<p>Another is to ask how success is measured six months in.</p>
+      <p>
+        Weaker ones stay high level.
+      </p>
 
-<p>Not usage metrics or engagement dashboards, but actual changes in decision quality, speed, or confidence. What would people do differently if this system disappeared tomorrow?</p>
+      <p>
+        They rely on generalities and push responsibility for outcomes downstream to the customer.
+      </p>
 
-<p>If the answer is vague, adoption will be too.</p>
+      <p>
+        If it fails, the implication is that adoption was mishandled.
+      </p>
 
-<h2>What “good” looks like in practice</h2>
+      <h2>Reality Checks That Protect Your Teams</h2>
 
-<p>The most effective AI deployments tend to be quiet.</p>
+      <p>
+        Reality checks matter, not as a procurement exercise, but as a way of protecting teams from confusion later on.
+      </p>
 
-<p>They do not announce themselves. They do not rebrand workflows unnecessarily. They slot into existing decision points and reduce friction rather than creating new surfaces to manage.</p>
+      <p>
+        A useful test is to remove the AI language entirely.
+      </p>
 
-<p>They respect the human layer.</p>
+      <p>
+        If you describe the system without using words like intelligent, autonomous, or agentic, does the value still hold.
+      </p>
 
-<p>This is the part that rarely appears in vendor decks.</p>
+      <p>
+        Another is to ask how success is measured six months in.
+      </p>
 
-<p>AI does not remove judgement. It reshapes where judgement is applied. When this is ignored, trust erodes quickly. People either over rely on outputs or ignore them entirely.</p>
+      <p>
+        Not usage metrics or engagement dashboards, but actual changes in decision quality, speed, or confidence.
+      </p>
 
-<p>Neither leads to value.</p>
+      <p>
+        What would people do differently if this system disappeared tomorrow.
+      </p>
 
-<h2>The calm conclusion</h2>
+      <p>
+        If the answer is vague, adoption will be too.
+      </p>
 
-<p>The organisations making steady progress tend to take a slower, more grounded approach.</p>
+      <h2>Governance Is Part of Vendor Evaluation</h2>
 
-<p>They choose tools that fit the shape of their work rather than forcing work to fit the tool. They invest in clarity before capability. They ask uncomfortable questions early, when the cost of change is still low.</p>
+      <p>
+        Governance shows up in how you buy, not just how you build.
+      </p>
 
-<p>Cutting through AI theatre is less about scepticism and more about discipline.</p>
+      <p>
+        Ask what is logged, how long logs are retained, and whether you can access them easily.
+      </p>
 
-<p>The technology will keep improving regardless.</p>
+      <p>
+        Ask how prompts and data are separated across tenants.
+      </p>
 
-<p>The differentiator is whether organisations build the conditions for it to be used well.</p>
+      <p>
+        Ask what breaks internally if the system is paused.
+      </p>
 
-<p>That work is quieter, harder to market, and far more human than most AI narratives suggest.</p>
+      <p>
+        These questions are not traps. They are checks for production readiness.
+      </p>
 
-<p>And it is where the real advantage tends to sit.</p>
+      <p>
+        If you want the broader structure behind these checks, see
+        <a href="/articles/ai-governance-in-business.html">AI Governance in Business</a>.
+      </p>
 
+      <h2>What “Good” Looks Like in Practice</h2>
 
-<div class="navbtns">
-  <a href="/articles/when-capacity-opens-up.html">← Previous</a>
-  <a href="/articles/">All articles</a>
-  <a href="/articles/ai-transformation-vs-usage.html">Next →</a>
-</div>
+      <p>
+        The most effective AI deployments tend to be quiet.
+      </p>
+
+      <p>
+        They do not announce themselves.
+      </p>
+
+      <p>
+        They slot into existing decision points and reduce friction rather than creating new surfaces to manage.
+      </p>
+
+      <p>
+        They respect the human layer.
+      </p>
+
+      <p>
+        AI does not remove judgement. It reshapes where judgement is applied.
+      </p>
+
+      <p>
+        When this is ignored, trust erodes quickly.
+      </p>
+
+      <p>
+        People either over rely on outputs or ignore them entirely.
+      </p>
+
+      <p>
+        Neither leads to value.
+      </p>
+
+      <h2>The Calm Conclusion</h2>
+
+      <p>
+        The organisations making steady progress tend to take a slower, more grounded approach.
+      </p>
+
+      <p>
+        They choose tools that fit the shape of their work rather than forcing work to fit the tool.
+      </p>
+
+      <p>
+        They invest in clarity before capability.
+      </p>
+
+      <p>
+        They ask uncomfortable questions early, when the cost of change is still low.
+      </p>
+
+      <p>
+        Cutting through AI theatre is less about scepticism and more about discipline.
+      </p>
+
+      <p>
+        The technology will keep improving regardless.
+      </p>
+
+      <p>
+        The differentiator is whether organisations build the conditions for it to be used well.
+      </p>
+
+      <p>
+        That work is quieter, harder to market, and far more human than most AI narratives suggest.
+      </p>
+
+      <p>
+        If you want the wider sequencing view, see
+        <a href="/articles/ai-adoption-strategy-for-business.html">AI Adoption Strategy for Business</a>.
+      </p>
+
+      <p>
+        If you want a quick router to related questions, use the
+        <a href="/ai-adoption-faq.html">AI Adoption FAQ</a>.
+      </p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>How should a business evaluate an AI vendor?</h3>
+      <p>
+        Start with the workflow, not the features. Ask what the system replaces, who owns the outputs, how errors are handled, and what changes in decision-making. Then test whether governance, logging, and support are production ready.
+      </p>
+
+      <h3>What questions reveal whether an AI tool is production ready?</h3>
+      <p>
+        Ask what is logged, how long logs are retained, how prompts and data are isolated across tenants, what monitoring exists, and what happens if the system must be paused. Production readiness is mostly operational.
+      </p>
+
+      <h3>What is AI theatre in vendor conversations?</h3>
+      <p>
+        AI theatre is when narrative outpaces operational reality. It often shows up as impressive demos without clear ownership, integration, auditability, or a plan for failure modes and human sign-off.
+      </p>
+
+      <h3>What should leaders measure after buying an AI tool?</h3>
+      <p>
+        Measure workflow outcomes such as cycle time, quality, error rates, decision confidence, and operational load. Usage dashboards can be useful, but they rarely reflect business impact on their own.
+      </p>
+
+      <div class="navbtns">
+        <a href="/articles/when-capacity-opens-up.html">← Previous</a>
+        <a href="/articles/">All articles</a>
+        <a href="/articles/ai-transformation-vs-usage.html">Next →</a>
+      </div>
 
     </article>
 
