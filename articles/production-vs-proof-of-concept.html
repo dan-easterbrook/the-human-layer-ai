@@ -3,23 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>AI Adoption Strategy: Production vs Proof of Concept | The Human Layer AI</title>
   <meta name="description" content="Why production work becomes invisible and proof of concept gets the spotlight. A practical view on sequencing foundations first so AI can scale safely." />
-  <link rel="stylesheet" href="../style.css" />
-  <style>
-    .article { max-width: 780px; margin: 0 auto; padding: 22px 18px; }
-    .article h1 { font-size: 30px; margin: 10px 0 10px; }
-    .article .meta { color: var(--muted); font-size: 13px; margin-bottom: 18px; }
-    .article p { color: var(--text); }
-    .article h2 { margin-top: 22px; }
-    .article .navbtns { display:flex; gap:12px; justify-content:center; margin: 14px 0 0; }
-    .article .navbtns a {
-      background:#ffffff; color:#1b263b; text-decoration:none; font-weight:700;
-      padding:8px 14px; border-radius:10px; border:1px solid var(--border); display:inline-block;
-    }
-    .article .navbtns a:hover { background: rgba(255,255,255,0.85); }
-    .article .subtitle { margin: 0 0 18px; color: var(--muted); font-weight: 600; }
-  </style>
 
   <link rel="canonical" href="https://www.humanlayerai.co.uk/articles/production-vs-proof-of-concept.html">
 
@@ -27,13 +13,72 @@
   <meta property="og:description" content="Why production work is invisible, why pilots get attention, and how sequencing foundations first makes adoption compound.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.humanlayerai.co.uk/articles/production-vs-proof-of-concept.html">
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    .article { max-width: 780px; margin: 0 auto; padding: 22px 18px; }
+    .article h1 { font-size: 30px; margin: 10px 0 10px; }
+    .article .meta { color: var(--muted); font-size: 13px; margin-bottom: 18px; }
+    .article p { color: var(--text); }
+    .article h2 { margin-top: 22px; }
+    .article h3 { margin-top: 18px; }
+    .navbtns { display:flex; gap:12px; justify-content:center; margin: 22px 0 0; flex-wrap: wrap; }
+    .navbtns a {
+      background:#ffffff; color:#1b263b; text-decoration:none; font-weight:700;
+      padding:8px 14px; border-radius:10px; border:1px solid var(--border); display:inline-block;
+    }
+    .navbtns a:hover { background: rgba(255,255,255,0.9); }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between production work and proof of concept in AI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Proof of concept demonstrates that something can work in controlled conditions. Production work ensures it operates reliably inside real workflows with ownership, governance and accountability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do AI proofs of concept fail to scale?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many proofs rely on curated data, bypass governance questions and avoid integration complexity. Without operational foundations, early wins do not translate into repeatable outcomes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is production work often undervalued?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Production work reduces errors, clarifies ownership and improves reliability. When it works well, it becomes invisible, which makes it harder to demonstrate value despite being foundational."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How should organisations sequence AI adoption?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Stabilise foundations first, clarify governance and ownership, then use proofs of concept to test pathways before translating them into small, trustworthy production deployments."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <div class="container" id=top>
+  <div class="container" id="top">
+
     <div class="topbar">
       <div class="brand">
-        <img src="../logo.png" alt="The Human Layer AI logo" />
+        <img src="/logo.png" alt="The Human Layer AI logo" />
         <div>
           <div class="name">The Human Layer AI</div>
           <div class="tag">Practical guidance on AI adoption for business leaders</div>
@@ -43,119 +88,178 @@
       <div class="nav">
         <a href="/">Home</a>
         <a href="/articles/">Articles</a>
+        <a href="/ai-adoption-faq.html">FAQ</a>
       </div>
     </div>
 
     <article class="article">
 
       <h1>Production Work vs Proof of Concept</h1>
-      <p class="subtitle">Why Data Teams Struggle to Demonstrate Their Real Value</p>
       <div class="meta">7–8 min read • Adoption</div>
 
-      <p>Ask most data leaders what fills their time and they will describe two very different types of work.</p>
-
-      <p>On one side sits production. Pipelines, quality improvements, automation, standardised definitions and reporting layers that quietly keep decisions moving.</p>
-
-      <p>On the other side sits exploration. Proof of concept models, pilots, prototypes and experiments that hint at what might be possible.</p>
-
-      <p>Both matter. But they are not perceived equally. And that perception gap shapes how organisations prioritise AI.</p>
-
-      <h2>The work that keeps the business running</h2>
-
-      <p>Production work is not glamorous.</p>
-
-      <p>It reduces error rates. It removes manual steps. It aligns definitions across teams. It makes decisions more reliable.</p>
-
-      <p>When it works, it becomes invisible.</p>
-
-      <p>No executive celebrates the reconciliation that did not fail. No one applauds the three hours of manual effort that quietly disappeared.</p>
-
-      <p>Yet without this layer, nothing ambitious survives.</p>
-
-      <p>Production creates the conditions for scale. It builds trust. It forms the foundation that makes AI adoption possible.</p>
-
-      <h2>The visibility of the proof of concept</h2>
-
-      <p>Proofs of concept are different.</p>
-
-      <p>They are visible. They are easy to understand.</p>
-
-      <p>A predictive churn model. A demand forecast. A generative assistant.</p>
-
-      <p>Screenshots circulate. Slides look impressive. Leadership feels momentum.</p>
-
-      <p>A proof of concept produces artefacts. Production produces stability. One is easier to see in a boardroom.</p>
-
-      <h2>The seduction of demonstration</h2>
-
-      <p>Proofs of concept test viability. They stretch imagination. They unlock enthusiasm.</p>
-
-      <p>But they are fragile by design.</p>
-
-      <p>They often rely on curated datasets. They bypass governance questions. They avoid integration complexity. They operate in controlled conditions.</p>
-
-      <p>They prove something can work. They do not prove it can live inside your organisation.</p>
-
-      <p>When organisations lean too heavily on demonstrations, a familiar cycle appears: promising pilots, expectations of scale, operational constraints, fading momentum and frustration for everyone involved.</p>
-
-      <h2>The invisible prerequisites of AI adoption</h2>
-
-      <p>AI adoption rarely fails because models are weak. It fails because the surrounding system is not ready.</p>
-
-      <p>Ownership is unclear. Definitions conflict. Monitoring is absent. Accountability is undefined. Security engages too late.</p>
-
-      <p>These are production questions. They are human questions.</p>
-
-      <p>This is where the Human Layer lives. Not in the demo, but in the discipline required to operationalise it.</p>
-
-      <h2>The real value gap</h2>
-
-      <p>When organisations see more prototypes than production outcomes, they misread the data function.</p>
-
-      <p>They see experimentation. They overlook infrastructure.</p>
-
-      <p>They celebrate possibility. They underestimate capability.</p>
-
-      <p>The most transformative work often feels the least exciting. Yet it is the only work that compounds.</p>
-
-      <h2>A better sequence</h2>
-
-      <p>Production and proof of concept are not competitors. They are stages. But the order matters.</p>
+      <p>
+        Most organisations struggle with AI not because ideas are weak, but because sequencing is wrong.
+      </p>
 
       <p>
-This sequencing challenge is explored further in our 
-<a href="/articles/ai-adoption-strategy-for-business.html">
-AI adoption strategy
-</a> guide, which sets out how to move from proof of concept to production safely.
-</p>
-      
-      <p>Stabilise foundations. Improve reliability. Clarify ownership. Reduce friction.</p>
-
-      <p>Then select operational problems that matter.</p>
-
-      <p>Use proofs of concept to test pathways, not to impress.</p>
-
-      <p>Translate early wins into small, trustworthy production deployments.</p>
-
-      <p>Scale only when the process can sustain it.</p>
-
-      <h2>Governance before theatre</h2>
-
-      <p>Exploration is valuable. Mistaking exploration for progress is risky.</p>
-
-      <p>If a model cannot survive messy data, shifting inputs and real accountability, it is not adoption. It is theatre.</p>
-
-      <p>Production is where governance, trust and behaviour change intersect. It is where someone decides to rely on an output.</p>
-
-      <p>Prototypes spark imagination. Production earns trust. And trust is what allows AI to compound value rather than cycle through excitement and disappointment.</p>
+        Proof of concept gets attention.
+      </p>
 
       <p>
-This sequencing challenge is explored further in our 
-<a href="/articles/how-to-start-using-ai-in-your-business.html">
-AI adoption roadmap
-</a>, which sets out a practical way to move from proof of concept to production.
-</p>
-      
+        Production work earns trust.
+      </p>
+
+      <p>
+        The difference determines whether AI compounds or stalls.
+      </p>
+
+      <h2>The Work That Keeps the Business Running</h2>
+
+      <p>
+        Production work is not glamorous.
+      </p>
+
+      <p>
+        It reduces error rates. It removes manual steps. It aligns definitions across teams.
+      </p>
+
+      <p>
+        When it works, it becomes invisible.
+      </p>
+
+      <p>
+        Yet without this layer, nothing ambitious survives.
+      </p>
+
+      <p>
+        Production creates the conditions for scale. It builds trust. It forms the foundation that makes AI adoption possible.
+      </p>
+
+      <h2>The Visibility of the Proof of Concept</h2>
+
+      <p>
+        Proofs of concept are different.
+      </p>
+
+      <p>
+        They are visible. They are easy to understand.
+      </p>
+
+      <p>
+        A predictive model. A generative assistant. A forecast dashboard.
+      </p>
+
+      <p>
+        Screenshots circulate. Slides look impressive. Leadership feels momentum.
+      </p>
+
+      <p>
+        A proof of concept produces artefacts. Production produces stability.
+      </p>
+
+      <h2>The Seduction of Demonstration</h2>
+
+      <p>
+        Proofs of concept test viability.
+      </p>
+
+      <p>
+        But they are fragile by design.
+      </p>
+
+      <p>
+        They often rely on curated datasets, bypass governance questions and avoid integration complexity.
+      </p>
+
+      <p>
+        They prove something can work. They do not prove it can live inside your organisation.
+      </p>
+
+      <h2>The Invisible Prerequisites of AI Adoption</h2>
+
+      <p>
+        AI adoption rarely fails because models are weak.
+      </p>
+
+      <p>
+        It fails because the surrounding system is not ready.
+      </p>
+
+      <p>
+        Ownership is unclear. Definitions conflict. Monitoring is absent.
+      </p>
+
+      <p>
+        These are production questions.
+      </p>
+
+      <p>
+        This is where the Human Layer lives.
+      </p>
+
+      <h2>A Better Sequence</h2>
+
+      <p>
+        Production and proof of concept are not competitors.
+      </p>
+
+      <p>
+        But the order matters.
+      </p>
+
+      <p>
+        Stabilise foundations. Clarify ownership. Improve reliability.
+      </p>
+
+      <p>
+        Then use proofs of concept to test pathways, not to impress.
+      </p>
+
+      <p>
+        Translate early wins into small, trustworthy production deployments.
+      </p>
+
+      <p>
+        Scale only when the process can sustain it.
+      </p>
+
+      <p>
+        For structured sequencing, see
+        <a href="/articles/ai-adoption-strategy-for-business.html">AI Adoption Strategy for Business</a>.
+      </p>
+
+      <p>
+        For a practical starting point, see
+        <a href="/articles/how-to-start-using-ai-in-your-business.html">How to Start Using AI in Your Business</a>.
+      </p>
+
+      <p>
+        For related questions, visit the
+        <a href="/ai-adoption-faq.html">AI Adoption FAQ</a>.
+      </p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <h3>What is the difference between production work and proof of concept in AI?</h3>
+      <p>
+        Proof of concept demonstrates that something can work in controlled conditions. Production work ensures it operates reliably inside real workflows with ownership, governance and accountability.
+      </p>
+
+      <h3>Why do AI proofs of concept fail to scale?</h3>
+      <p>
+        Many proofs rely on curated data and bypass governance. Without operational foundations, early wins do not translate into repeatable outcomes.
+      </p>
+
+      <h3>Why is production work often undervalued?</h3>
+      <p>
+        Production work becomes invisible when it works well, even though it is foundational for reliability and trust.
+      </p>
+
+      <h3>How should organisations sequence AI adoption?</h3>
+      <p>
+        Stabilise governance and ownership first, then use proofs to test pathways before scaling through production deployments.
+      </p>
+
       <div class="navbtns">
         <a href="/articles/ai-transformation-vs-usage.html">← Previous</a>
         <a href="/articles/">All articles</a>
@@ -169,20 +273,16 @@ AI adoption roadmap
         <a href="https://www.instagram.com/thehumanlayerai/" target="_blank" rel="noopener" aria-label="Instagram">
           <img src="/icons/instagram.svg" alt="Instagram">
         </a>
-
         <a href="https://www.tiktok.com/@the_human_layer_ai" target="_blank" rel="noopener" aria-label="TikTok">
           <img src="/icons/tiktok.svg" alt="TikTok">
         </a>
-
         <a href="https://www.linkedin.com/in/human-layer-ai-51b4233a8/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <img src="/icons/linkedin.svg" alt="LinkedIn">
         </a>
       </div>
-
       <p style="margin: 18px 0 0;">
         <a href="#top" style="text-decoration:none; font-weight:700;">↑ Back to top</a>
       </p>
-
       <p style="margin: 10px 0 0;">© The Human Layer AI</p>
     </div>
 
